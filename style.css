@@ -42,9 +42,9 @@ header a{
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 45px;
   padding: 10px 0;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .header-h1-box h1{
   position: absolute;
