@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+body{
+  font-family: "Meiryo UI";
+  font-weight: normal;
+  color: #333;
+  line-height: 1.7;
+  background: linear-gradient( #ffffff, #efefef);
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.wrapper-main{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.wrapper-img{
+  max-width: 1000px;
+  margin: 0 auto;
+  /* padding: 0 4%; */
+}
+
+/* ヘッダー部分 */
+.header{
+  margin-bottom: 50px;
+}
+header a{
+  font-family: "Yu Gothic UI";
+  color: #333;
+}
+.pc-header-nav{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 10px 0;
+  margin-bottom: 50px;
+}
+.header-h1-box h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+header .pc-header-nav a{
+  display: block;
+  font-size: 2rem;
+  width: 120px;
+  height: 60px;
+  text-align: center;
+}
+.button-box{
+  position: relative;
+}
+
+/* ボタン装飾1 */
+.border{
+  position:absolute;
+  background:none;
+  transition:all .5s ease-in-out;
+}
+#fourth .border:nth-of-type(1){
+  top: 0px;
+  left:0;
+  width:0;
+  height:0;
+  border-top:1px solid #333;
+}
+#fourth .border:nth-of-type(2){
+  top:0;
+  right:0px;
+  width:0px;
+  height:0;
+  border-right:1px solid #333;
+}
+#fourth .border:nth-of-type(3){
+  bottom:0px;
+  right:0;
+  width:0;
+  height:0;
+  border-bottom:1px solid #333;
+}
+#fourth .border:nth-of-type(4){
+  bottom:0;
+  left:0;
+  width:0;
+  height:0;
+  border-left:1px solid #333;
+}
+#fourth:hover .border:nth-of-type(1){
+  width:110%;
+}
+#fourth:hover .border:nth-of-type(2){
+  height:100%;
+}
+#fourth:hover .border:nth-of-type(3){
+  width:110%;
+}
+#fourth:hover .border:nth-of-type(4){
+  height:100%;
+}
+
+/* ボタン装飾2 */
+.button1::before,
+.button1::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button1,
+.button1::before,
+.button1::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.button1::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.button1:hover::after {
+  background: #5985fc;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.button1:hover {
+  color: #fff;
+}
+
+/* ボタン装飾3 */
+.button2::before,
+.button2::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button2,
+.button2::before,
+.button2::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.button2::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.button2:hover::after {
+  background: #ffcb63;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.button2:hover {
+  color: #fff;
+}
+
+/* ヘッダー背景 */
+.bg-img-box {
+  position   : relative;
+  max-width  : 1000px;
+  height     : 400px;
+  margin-bottom: 15px;
+}
+.bg-img-box .bg-Img {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  height: 100%;
+  width: 100%;
+  opacity    : 0;
+  animation  : bgAnime 18s infinite;
+}
+.bg-img-box .src1 {
+  background-image : url(images/art-1851483_1000_400.png);
+}
+.bg-img-box .src2 {
+  background-image: url(images/computer-768608_1000_400.png);
+  animation-delay: 6s;
+}
+.bg-img-box .src3 {
+  background-image: url(images/hands-1947915_1000_400.png);
+  animation-delay: 12s;
+}
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  40% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+/* 帯 */
+.obi{
+  height: 10px;
+  width: 100%;
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #5985fc, #ffcb63);
+}
+
+/* メイン */
+.main{
+  margin-bottom: 80px;
+}
+.main-content{
+  margin-bottom: 60px;
+}
+.main-content h2{
+  font-family: "Meiryo UI";
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main-content p{
+  font-family: "Meiryo UI";
+}
+.skill{
+  margin-bottom: 60px;
+}
+.skill-list{
+  display: flex;
+}
+.skill-box{
+  width: calc(100% / 6);
+  text-align: center;
+}
+.icon{
+  width: 100px;
+  height: 100px;
+}
+.sub-title{
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+.sub-title::before{
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  display: block;
+  width: 100px;
+  height: 3px;
+  content: "";
+  background-color: #5985fc;
+}
+.sub-title::after{
+  position: absolute;
+  top: 50%;
+  right: 28%;
+  display: block;
+  width: 100px;
+  height: 3px;
+  content: "";
+  background-color: #ffcb63;
+}
+.twitter{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* About */
+.page-title-box{
+  max-width  : 1000px;
+  height     : 100px;
+  margin-bottom: 15px;
+  border-top: 1px #333 solid;
+  border-bottom: 1px #333 solid;
+  padding: 0 30px;
+}
+.page-title{
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.5rem;
+  line-height: 100px;
+}
+.page-title::after{
+  content: " -";
+}
+.page-title::before{
+  content: "- ";
+}
+.about-main{
+  margin-bottom: 60px;
+}
+.about-main-content a{
+  color: #333;
+}
+.about-main-content a:hover{
+  color: #5985fc;
+}
+
+/* Note */
+.note-main-content{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 50px;
+}
+.note-box{
+  text-align: center;
+}
+.note-main{
+  margin-bottom: 60px;
+}
+
+/* スマホ版 */
+.sp-img{
+  display: none;
+}
+.overlay{
+  display: none;
+  pointer-events: none;
+}
+.sp-menu{
+  display: none;
+  pointer-events: none;
+}
+
+@media(max-width: 1000px){
+  .bg-img-box {
+    height: calc(400 / 1000 * 100vw);
+  }
+}
+
+@media(max-width: 900px){
+  .bg-img-box {
+    display: none;
+  }
+  .sp-img{
+    display: block;
+    margin-bottom: 15px;
+  }
+  .sub-title::before{
+    left: 20%;
+  }
+  .sub-title::after{
+    right: 20%;
+  }
+}
+
+@media(max-width: 730px){
+  .pc-header-nav{
+    display: none;
+  }
+  #open{
+    font-size: 3rem;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  .header-h1-box h1{
+    display: none;
+  }
+  .sp-menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+  }
+  .sp-menu-box h1{
+    font-size: 2rem;
+  }
+  .wrapper-main{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+  .main-content h2{
+    font-size: 1.1rem;
+  }
+  .main-content p{
+    line-height: 2.0;
+  }
+  .sub-title::before{
+    left: 5%;
+    width: 50px;
+  }
+  .sub-title::after{
+    right: 5%;
+    width: 50px;
+  }
+  .skill-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .skill-box{
+    width: auto;
+  }
+  .sub-title{
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+  }
+
+  /* バーガーメニュー部分 */
+  .sp-menu{
+    pointer-events: auto;
+  }
+  .overlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    z-index: 10;
+  }
+  #close{
+    position: absolute;
+    font-size: 3rem;
+    top: 33px;
+    right: 52px;
+    cursor: pointer;
+  }
+  .sp-main-nav{
+    text-align: center;
+    list-style: none;
+    margin-top: 30%; 
+  }
+  .sp-main-nav li{
+    margin-top: 80px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s, transform .6s;
+  }
+  .sp-main-nav a{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3rem;
+  }
+  .overlay.show li{
+    opacity: 1;
+    transform: none;
+  }
+  .overlay.show li:nth-child(1){
+    transition-delay: 0.1s;
+  }
+  .overlay.show li:nth-child(2){
+    transition-delay: 0.2s;
+  }
+  .overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #open.hide{
+    display: none;
+  }
+  .body.scroll{
+    overflow: hidden;
+  }
+  .note-main-content{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+}
